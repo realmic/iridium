@@ -1,7 +1,7 @@
 FROM debian:sid-slim
 
 ENV BUILDDEPS cmake make g++ gcc python2.7 git libboost1.61-all-dev
-ENV STATICDEPS libboost-serialization1.61.0 libboost-system1.61.0 libboost-filesystem1.61.0 libboost-thread1.61.0 libboost-date-time1.61.0 libboost-chrono1.61.0 libboost-regex1.61.0 libboost-program-options1.61.0
+ENV STATICDEPS libboost-atomic1.61.0 libboost-serialization1.61.0 libboost-system1.61.0 libboost-filesystem1.61.0 libboost-thread1.61.0 libboost-date-time1.61.0 libboost-chrono1.61.0 libboost-regex1.61.0 libboost-program-options1.61.0
 
 RUN apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y $STATICDEPS $BUILDDEPS \
