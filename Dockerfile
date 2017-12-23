@@ -15,7 +15,7 @@ RUN make -j4
 RUN apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $BUILDDEPS
 
 RUN mkdir /opt/iridium_data && mkdir /opt/iridium_bin
-RUN cp /opt/iridium/build/release/src/walletd /opt/iridium_bin
+RUN cp /opt/iridium/build/release/src/simplewallet /opt/iridium_bin
 RUN cp /opt/iridium/build/release/src/iridiumd /opt/iridium_bin
 
 RUN chmod -R 755 /opt/iridium_bin/
